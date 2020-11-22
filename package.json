@@ -24,7 +24,11 @@
   },
   "keywords": [
     "react",
-    "react-native"
+    "react-native",
+    "smart",
+    "scroll",
+    "container",
+    "component"
   ],
   "bugs": {
     "url": "https://github.com/native-ly/native-smart-scroll-container/issues"

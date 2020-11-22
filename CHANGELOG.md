@@ -3,3 +3,5 @@
 ## 1.0.0 (Soon)
 
 #### New Feature
+
+- added `SmartScrollContainer` component
