@@ -42,7 +42,7 @@ const App = () => {
       <View
         style={{
           height: 1000,
-          width: 200 /*TODO 700*/,
+          width: 200,
           backgroundColor: 'red',
         }}
       />
