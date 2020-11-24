@@ -27,6 +27,30 @@ $ yarn add native-smart-scroll-container
 
 ## Options
 
+Component uses ScrollViewProps
+
+## Example
+
+```js
+import React from 'react'
+import { View } from 'react-native'
+import SmartScrollContainer from 'native-smart-scroll-container'
+
+const App = () => {
+  return (
+    <SmartScrollContainer>
+      <View
+        style={{
+          height: 1000,
+          width: 200 /*TODO 700*/,
+          backgroundColor: 'red',
+        }}
+      />
+    </SmartScrollContainer>
+  )
+}
+```
+
 ## License
 
 This project is licensed under the MIT License © 2020-present Jakub Biesiada

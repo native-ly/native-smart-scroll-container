@@ -1,7 +1,7 @@
 {
   "name": "native-smart-scroll-container",
   "version": "0.0.0",
-  "description": "",
+  "description": "Enable scroll based on content size",
   "author": "Jakub Biesiada",
   "license": "MIT",
   "main": "lib/index.js",
