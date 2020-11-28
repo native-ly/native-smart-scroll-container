@@ -9,7 +9,7 @@
 
 ## About
 
-Enable scroll based on content size
+Enable scroll in container based on content size
 
 ## How to Install
 
