@@ -33,19 +33,12 @@ Component uses ScrollViewProps
 
 ```js
 import React from 'react'
-import { View } from 'react-native'
 import SmartScrollContainer from 'native-smart-scroll-container'
 
 const App = () => {
   return (
     <SmartScrollContainer>
-      <View
-        style={{
-          height: 1000,
-          width: 200,
-          backgroundColor: 'red',
-        }}
-      />
+      {/* React Native Components & content here... */}
     </SmartScrollContainer>
   )
 }
