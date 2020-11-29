@@ -12,15 +12,22 @@ const SmartScrollContainer = ({
   onContentSizeChange,
   horizontal,
 }: Props) => {
-  const [wrapperSize, setWrapperSize] = useState(0)
+  const [wrapperWidth, setWrapperWidth] = useState(0)
+  const [wrapperHeight, setWrapperHeight] = useState(0)
   const [contentSize, setContentSize] = useState(0)
 
   return (
     <ScrollView
       horizontal={horizontal}
-      scrollEnabled={scrollEnabled ?? wrapperSize < contentSize}
+      scrollEnabled={
+        scrollEnabled ??
+        (horizontal ? wrapperWidth : wrapperHeight) < contentSize
+      }
       onLayout={(e) => {
-        setWrapperSize(e.nativeEvent.layout[horizontal ? 'width' : 'height'])
+        const { width, height } = e.nativeEvent.layout
+
+        setWrapperWidth(width)
+        setWrapperHeight(height)
 
         onLayout?.(e)
       }}
