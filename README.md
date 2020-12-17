@@ -1,4 +1,4 @@
-# [native-smart-scroll-container](https://github.com/native-ly/native-smart-scroll-container) (WIP)
+# [native-smart-scroll-container](https://github.com/native-ly/native-smart-scroll-container)
 
 [![NPM version](https://img.shields.io/npm/v/native-smart-scroll-container?style=flat-square)](https://www.npmjs.com/package/native-smart-scroll-container)
 [![NPM downloads](https://img.shields.io/npm/dm/native-smart-scroll-container?style=flat-square)](https://www.npmjs.com/package/native-smart-scroll-container)
