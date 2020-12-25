@@ -11,6 +11,7 @@ const SmartScrollContainer = ({
   onLayout,
   onContentSizeChange,
   horizontal,
+  ...props
 }: Props) => {
   const [wrapperWidth, setWrapperWidth] = useState(0)
   const [wrapperHeight, setWrapperHeight] = useState(0)
@@ -18,6 +19,7 @@ const SmartScrollContainer = ({
 
   return (
     <ScrollView
+      {...props}
       horizontal={horizontal}
       scrollEnabled={
         scrollEnabled ??

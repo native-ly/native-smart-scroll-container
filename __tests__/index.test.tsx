@@ -1,18 +1,28 @@
 import React from 'react'
 import { View } from 'react-native'
-import { render } from '@testing-library/react-native'
+import { render, fireEvent } from '@testing-library/react-native'
 
 import SmartScrollContainer from '../src'
 
 describe('SmartScrollContainer', () => {
-  it('should set scroll state automatically', () => {
+  it('should set scroll state automatically to enabled', () => {
     const { getByTestId } = render(
       <SmartScrollContainer testID="scroll-container" style={{ height: 500 }}>
         <View style={{ height: 1600 }} />
       </SmartScrollContainer>
     )
 
-    expect(getByTestId('scroll-container')).toBe(false)
+    expect(getByTestId('scroll-container').props.scrollEnabled).toBe(true)
+  })
+
+  it('should set scroll state automatically to disabled', () => {
+    const { getByTestId } = render(
+      <SmartScrollContainer testID="scroll-container" style={{ height: 500 }}>
+        <View style={{ height: 100 }} />
+      </SmartScrollContainer>
+    )
+
+    expect(getByTestId('scroll-container').props.scrollEnabled).toBe(false)
   })
 
   it('should render container with force disabled scroll', () => {
@@ -26,7 +36,7 @@ describe('SmartScrollContainer', () => {
       </SmartScrollContainer>
     )
 
-    expect(getByTestId('scroll-container')).toBe(false)
+    expect(getByTestId('scroll-container').props.scrollEnabled).toBe(true)
   })
 
   it('should render container with force enabled scroll', () => {
@@ -40,7 +50,7 @@ describe('SmartScrollContainer', () => {
       </SmartScrollContainer>
     )
 
-    expect(getByTestId('scroll-container')).toBe(false)
+    expect(getByTestId('scroll-container').props.scrollEnabled).toBe(true)
   })
 
   it('should render horizontal container', () => {
@@ -54,6 +64,6 @@ describe('SmartScrollContainer', () => {
       </SmartScrollContainer>
     )
 
-    expect(getByTestId('scroll-container')).toBe(false)
+    expect(getByTestId('scroll-container').props.scrollEnabled).toBe(true)
   })
 })
