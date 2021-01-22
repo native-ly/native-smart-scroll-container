@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useCallback, useMemo, useState } from 'react'
 import { ScrollViewProps, ScrollView, LayoutChangeEvent } from 'react-native'
 
 interface Props extends ScrollViewProps {
   readonly children: React.ReactNode
 }
+
+type HandleLayoutCallback = (e: LayoutChangeEvent) => void
+type HandleContentSizeChangeCallback = (w: number, h: number) => void
 
 const SmartScrollContainer = ({
   children,
@@ -17,23 +20,33 @@ const SmartScrollContainer = ({
   const [wrapperHeight, setWrapperHeight] = useState(0)
   const [contentSize, setContentSize] = useState(0)
 
-  const isScrollEnabled =
-    scrollEnabled ?? (horizontal ? wrapperWidth : wrapperHeight) < contentSize
+  const isScrollEnabled = useMemo(
+    () =>
+      scrollEnabled ??
+      (horizontal ? wrapperWidth : wrapperHeight) < contentSize,
+    [contentSize, horizontal, scrollEnabled, wrapperHeight, wrapperWidth]
+  )
 
-  const handleLayout = (e: LayoutChangeEvent) => {
-    const { width, height } = e.nativeEvent.layout
+  const handleLayout = useCallback<HandleLayoutCallback>(
+    (e) => {
+      const { width, height } = e.nativeEvent.layout
 
-    setWrapperWidth(width)
-    setWrapperHeight(height)
+      setWrapperWidth(width)
+      setWrapperHeight(height)
 
-    onLayout?.(e)
-  }
+      onLayout?.(e)
+    },
+    [onLayout]
+  )
 
-  const handleContentSizeChange = (w: number, h: number) => {
-    setContentSize(horizontal ? w : h)
+  const handleContentSizeChange = useCallback<HandleContentSizeChangeCallback>(
+    (w, h) => {
+      setContentSize(horizontal ? w : h)
 
-    onContentSizeChange?.(w, h)
-  }
+      onContentSizeChange?.(w, h)
+    },
+    [horizontal, onContentSizeChange]
+  )
 
   return (
     <ScrollView
