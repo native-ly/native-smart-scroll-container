@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmartScrollContainer should adjust to layout change 1`] = `
+<RCTScrollView
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onScroll={[MockFunction]}
+  scrollEnabled={false}
+  style={
+    Object {
+      "height": 860,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "height": 1661,
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
+
+exports[`SmartScrollContainer should render container with enabled horizontal scroll 1`] = `
+<RCTScrollView
+  horizontal={true}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  scrollEnabled={true}
+  style={
+    Object {
+      "height": 543,
+    }
+  }
+  testID="scroll-container"
+>
+  <View>
+    <View
+      style={
+        Object {
+          "height": 1234,
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
+
+exports[`SmartScrollContainer should render container with force disabled scroll 1`] = `
+<RCTScrollView
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  scrollEnabled={false}
+  style={
+    Object {
+      "height": 480,
+    }
+  }
+  testID="scroll-container"
+>
+  <View>
+    <View
+      style={
+        Object {
+          "height": 1597,
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
+
+exports[`SmartScrollContainer should render container with force enabled scroll 1`] = `
+<RCTScrollView
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  scrollEnabled={true}
+  style={
+    Object {
+      "height": 760,
+    }
+  }
+  testID="scroll-container"
+>
+  <View>
+    <View
+      style={
+        Object {
+          "height": 1269,
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
+
+exports[`SmartScrollContainer should set scroll state automatically to disabled 1`] = `
+<RCTScrollView
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  scrollEnabled={false}
+  style={
+    Object {
+      "height": 680,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "height": 360,
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
+
+exports[`SmartScrollContainer should set scroll state automatically to enabled 1`] = `
+<RCTScrollView
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  scrollEnabled={false}
+  style={
+    Object {
+      "height": 500,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "height": 1600,
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
+`;
