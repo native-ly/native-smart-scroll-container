@@ -4,12 +4,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:react/recommended',
-<<<<<<< Updated upstream
     'plugin:react-hooks/recommended',
-=======
-    'plugin:import/errors',
-    'plugin:import/typescript',
->>>>>>> Stashed changes
   ],
   plugins: ['functional', 'prettier', 'react-native'],
   env: {
