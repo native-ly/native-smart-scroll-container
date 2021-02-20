@@ -6,7 +6,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
   ],
-  plugins: ['functional', 'prettier', 'react-native'],
+  plugins: ['prettier', 'react-native'],
   env: {
     'react-native/react-native': true,
     node: true,
