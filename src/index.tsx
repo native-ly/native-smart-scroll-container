@@ -1,6 +1,8 @@
 import React, { useCallback, useMemo, useState } from 'react'
 import { ScrollViewProps, ScrollView, LayoutChangeEvent } from 'react-native'
 
+// TODO check if required
+// TODO export type
 interface Props extends ScrollViewProps {
   readonly children: React.ReactNode
 }
