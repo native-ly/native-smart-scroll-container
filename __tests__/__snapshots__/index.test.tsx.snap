@@ -1,29 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SmartScrollContainer should adjust to layout change 1`] = `
-<RCTScrollView
-  onContentSizeChange={[Function]}
-  onLayout={[Function]}
-  onScroll={[MockFunction]}
-  scrollEnabled={false}
-  style={
-    Object {
-      "height": 860,
-    }
-  }
->
-  <View>
-    <View
-      style={
-        Object {
-          "height": 1661,
-        }
-      }
-    />
-  </View>
-</RCTScrollView>
-`;
-
 exports[`SmartScrollContainer should render container with enabled horizontal scroll 1`] = `
 <RCTScrollView
   horizontal={true}
