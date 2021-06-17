@@ -87,4 +87,6 @@ describe('SmartScrollContainer', () => {
   //   expect(onLayout).toHaveBeenCalledWith()
   //   expect(onScroll).toHaveBeenCalledWith()
   // })
+
+  it.todo('add test for onSmartScrollStatusChange')
 })
