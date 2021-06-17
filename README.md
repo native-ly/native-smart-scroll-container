@@ -27,7 +27,11 @@ $ yarn add native-smart-scroll-container
 
 ## Options
 
-Component uses ScrollViewProps
+Component extends ScrollViewProps
+
+| Name                      | Type              | Default     | Description                            |
+| ------------------------- | ----------------- | ----------- | -------------------------------------- |
+| onSmartScrollStatusChange | (boolean) => void | `undefined` | Callback on smart scroll status change |
 
 ## Example
 

@@ -31,7 +31,7 @@ const SmartScrollContainer = ({
 
   useEffect(() => {
     onSmartScrollStatusChange?.(isScrollEnabled)
-  }, [isScrollEnabled])
+  }, [isScrollEnabled, onSmartScrollStatusChange])
 
   const handleLayout = useCallback<HandleLayoutCallback>(
     (e) => {
