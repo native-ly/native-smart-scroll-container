@@ -27,7 +27,7 @@ $ yarn add native-smart-scroll-container
 
 ## Options
 
-Component extends ScrollViewProps
+Component extends [ScrollViewProps](https://reactnative.dev/docs/scrollview#props)
 
 | Name                      | Type              | Default     | Description                            |
 | ------------------------- | ----------------- | ----------- | -------------------------------------- |
