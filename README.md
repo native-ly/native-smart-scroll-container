@@ -29,9 +29,9 @@ $ yarn add native-smart-scroll-container
 
 Component extends [ScrollViewProps](https://reactnative.dev/docs/scrollview#props)
 
-| Name                      | Type              | Default     | Description                            |
-| ------------------------- | ----------------- | ----------- | -------------------------------------- |
-| onSmartScrollStatusChange | (boolean) => void | `undefined` | Callback on smart scroll status change |
+| Name                      | Type                               | Default     | Description                            |
+| ------------------------- | ---------------------------------- | ----------- | -------------------------------------- |
+| onSmartScrollStatusChange | (isScrollEnabled: boolean) => void | `undefined` | Callback on smart scroll status change |
 
 ## Example
 
