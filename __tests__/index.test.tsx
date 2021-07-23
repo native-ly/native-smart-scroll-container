@@ -6,29 +6,33 @@ import SmartScrollContainer from '../src'
 
 describe('SmartScrollContainer', () => {
   it('should set scroll state automatically to enabled', () => {
-    const { toJSON } = render(
-      <SmartScrollContainer style={{ height: 500 }}>
+    const { toJSON, getByTestId, debug } = render(
+      <SmartScrollContainer testID="smart-scroll" style={{ height: 500 }}>
         <View style={{ height: 1600 }} />
       </SmartScrollContainer>
     )
 
+    debug()
+
+    expect(getByTestId('smart-scroll')).toBe(true)
     expect(toJSON()).toMatchSnapshot()
   })
 
   it('should set scroll state automatically to disabled', () => {
-    const { toJSON } = render(
-      <SmartScrollContainer style={{ height: 680 }}>
+    const { toJSON, getByTestId } = render(
+      <SmartScrollContainer testID="smart-scroll" style={{ height: 680 }}>
         <View style={{ height: 360 }} />
       </SmartScrollContainer>
     )
 
+    expect(getByTestId('smart-scroll').scrollEnabled).toBe(false)
     expect(toJSON()).toMatchSnapshot()
   })
 
   it('should render container with force disabled scroll', () => {
-    const { toJSON } = render(
+    const { toJSON, getByTestId } = render(
       <SmartScrollContainer
-        testID="scroll-container"
+        testID="smart-scroll"
         scrollEnabled={false}
         style={{ height: 480 }}
       >
@@ -36,13 +40,14 @@ describe('SmartScrollContainer', () => {
       </SmartScrollContainer>
     )
 
+    expect(getByTestId('smart-scroll').scrollEnabled).toBe(false)
     expect(toJSON()).toMatchSnapshot()
   })
 
   it('should render container with force enabled scroll', () => {
-    const { toJSON } = render(
+    const { toJSON, getByTestId } = render(
       <SmartScrollContainer
-        testID="scroll-container"
+        testID="smart-scroll"
         scrollEnabled={true}
         style={{ height: 760 }}
       >
@@ -50,6 +55,7 @@ describe('SmartScrollContainer', () => {
       </SmartScrollContainer>
     )
 
+    expect(getByTestId('smart-scroll').scrollEnabled).toBe(true)
     expect(toJSON()).toMatchSnapshot()
   })
 
@@ -69,24 +75,27 @@ describe('SmartScrollContainer', () => {
   })
 
   // TODO update test
-  // it('should adjust to layout change', () => {
-  //   const onLayout = jest.fn()
-  //   const onScroll = jest.fn()
+  it.skip('should adjust to layout change', () => {
+    const onLayout = jest.fn()
+    const onScroll = jest.fn()
+    const onSmartScrollStatusChange = jest.fn()
 
-  //   const { toJSON } = render(
-  //     <SmartScrollContainer
-  //       onLayout={onLayout}
-  //       onScroll={onScroll}
-  //       style={{ height: 860 }}
-  //     >
-  //       <View style={{ height: 1661 }} />
-  //     </SmartScrollContainer>
-  //   )
+    const { toJSON } = render(
+      <SmartScrollContainer
+        onLayout={onLayout}
+        onScroll={onScroll}
+        onSmartScrollStatusChange={onSmartScrollStatusChange}
+        style={{ height: 860 }}
+      >
+        <View style={{ height: 1661 }} />
+      </SmartScrollContainer>
+    )
 
-  //   expect(toJSON()).toMatchSnapshot()
-  //   expect(onLayout).toHaveBeenCalledWith()
-  //   expect(onScroll).toHaveBeenCalledWith()
-  // })
+    expect(toJSON()).toMatchSnapshot()
+    expect(onLayout).toHaveBeenCalledWith()
+    expect(onScroll).toHaveBeenCalledWith()
+    expect(onSmartScrollStatusChange).toHaveBeenCalledWith()
 
-  it.todo('add test for onSmartScrollStatusChange')
+    // TODO test after resize
+  })
 })
