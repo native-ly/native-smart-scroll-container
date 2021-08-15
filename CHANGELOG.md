@@ -1,4 +1,4 @@
-# native-smart-scroll-container Changelog
+# Native Smart Scroll Container Changelog
 
 ## 1.0.0 (2020-11-29)
 
