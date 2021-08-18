@@ -1,11 +1,12 @@
 # [Native Smart Scroll Container](https://github.com/native-ly/native-smart-scroll-container)
 
-[![NPM version](https://img.shields.io/npm/v/native-smart-scroll-container?style=flat-square)](https://www.npmjs.com/package/native-smart-scroll-container)
-[![NPM downloads](https://img.shields.io/npm/dm/native-smart-scroll-container?style=flat-square)](https://www.npmjs.com/package/native-smart-scroll-container)
-[![NPM license](https://img.shields.io/npm/l/native-smart-scroll-container?style=flat-square)](https://www.npmjs.com/package/native-smart-scroll-container)
+[![NPM version](https://flat.badgen.net/npm/v/native-smart-scroll-container)](https://www.npmjs.com/package/native-smart-scroll-container)
+[![NPM downloads](https://flat.badgen.net/npm/dm/native-smart-scroll-container)](https://www.npmjs.com/package/native-smart-scroll-container)
+[![NPM license](https://flat.badgen.net/npm/license/native-smart-scroll-container)](https://www.npmjs.com/package/native-smart-scroll-container)
 [![run in expo snack](https://img.shields.io/badge/Run%20in%20Snack-4630EB?style=flat-square&logo=EXPO&labelColor=FFF&logoColor=000)](https://snack.expo.io/@jbiesiada/native-smart-scroll-container)
-[![Codecov](https://img.shields.io/codecov/c/github/native-ly/native-smart-scroll-container?style=flat-square)](https://codecov.io/gh/native-ly/native-smart-scroll-container)
-[![Travis](https://img.shields.io/travis/com/native-ly/native-smart-scroll-container/main?style=flat-square)](https://travis-ci.com/native-ly/native-smart-scroll-container)
+[![Codecov](https://flat.badgen.net/codecov/c/github/native-ly/native-smart-scroll-container)](https://codecov.io/gh/native-ly/native-smart-scroll-container)
+[![Travis](https://flat.badgen.net/travis/native-ly/native-smart-scroll-container)](https://travis-ci.com/native-ly/native-smart-scroll-container)
+[![Bundle size](https://flat.badgen.net/packagephobia/install/native-smart-scroll-container)](https://packagephobia.com/result?p=native-smart-scroll-container)
 
 ## About
 
