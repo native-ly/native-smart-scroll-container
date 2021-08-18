@@ -55,6 +55,8 @@ const App = () => {
     </SmartScrollContainer>
   )
 }
+
+export default App
 ```
 
 ## License
