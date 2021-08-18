@@ -51,7 +51,7 @@ import SmartScrollContainer from 'native-smart-scroll-container'
 const App = () => {
   return (
     <SmartScrollContainer>
-      {/* React Native Components & content here... */}
+      {/* React Native components & content here... */}
     </SmartScrollContainer>
   )
 }
