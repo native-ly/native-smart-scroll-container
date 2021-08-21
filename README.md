@@ -1,4 +1,4 @@
-# [native-smart-scroll-container](https://github.com/native-ly/native-smart-scroll-container)
+# [Native Smart Scroll Container](https://github.com/native-ly/native-smart-scroll-container)
 
 [![NPM version](https://img.shields.io/npm/v/native-smart-scroll-container?style=flat-square)](https://www.npmjs.com/package/native-smart-scroll-container)
 [![NPM downloads](https://img.shields.io/npm/dm/native-smart-scroll-container?style=flat-square)](https://www.npmjs.com/package/native-smart-scroll-container)
@@ -9,7 +9,7 @@
 
 ## About
 
-Enable scroll in container based on content size
+Enable scroll in the container based on content size
 
 ## How to Install
 
@@ -23,6 +23,14 @@ Or Yarn:
 
 ```sh
 $ yarn add native-smart-scroll-container
+```
+
+## Getting Started
+
+**Connect the library with the project using ES6 import:**
+
+```js
+import SmartScrollContainer from 'native-smart-scroll-container'
 ```
 
 ## Options

@@ -2,12 +2,11 @@ src
 assets
 __tests__
 coverage
+.husky
 .jest
-
 tsconfig.json
 .travis.yml
 .prettierrc
-
 .eslintrc.js
 yarn-error.log
 babel.config.js
