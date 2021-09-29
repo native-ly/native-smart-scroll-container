@@ -4,6 +4,7 @@ import { render } from '@testing-library/react-native'
 
 import SmartScrollContainer from '../src'
 
+// TODO
 describe('SmartScrollContainer', () => {
   it('should set scroll state automatically to enabled', () => {
     const { toJSON } = render(

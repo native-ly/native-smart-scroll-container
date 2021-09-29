@@ -7,9 +7,10 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "prepack": "npm run clean && npm run prettier && npm run lint && npm run build",
+    "prepack": "npm run prettier && npm run lint && npm run build",
     "clean": "rimraf lib/*",
     "build": "tsc",
+    "prebuild": "npm run clean",
     "test": "jest --coverage",
     "watch": "npm run build -- --watch",
     "watch:test": "npm run test -- --watch",
