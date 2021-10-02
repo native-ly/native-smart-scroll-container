@@ -26,7 +26,7 @@ const SmartScrollContainer = ({
 
   const isScrollEnabled = useMemo(
     () =>
-      scrollEnabled ??
+      scrollEnabled ||
       (horizontal ? wrapperWidth : wrapperHeight) < contentSize,
     [contentSize, horizontal, scrollEnabled, wrapperHeight, wrapperWidth]
   )
