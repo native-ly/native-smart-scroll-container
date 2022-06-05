@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState, useEffect } from 'react'
-import { ScrollViewProps, ScrollView } from 'react-native'
+import { ScrollViewProps, ScrollView, View } from 'react-native'
 
 interface Props extends ScrollViewProps {
   readonly children: React.ReactNode
@@ -56,8 +56,10 @@ const SmartScrollContainer = ({
     [horizontal, onContentSizeChange]
   )
 
+  const Component = !scrollEnabled && !horizontal ? View : ScrollView
+
   return (
-    <ScrollView
+    <Component
       {...props}
       horizontal={horizontal}
       scrollEnabled={isScrollEnabled}
@@ -65,7 +67,7 @@ const SmartScrollContainer = ({
       onContentSizeChange={handleContentSizeChange}
     >
       {children}
-    </ScrollView>
+    </Component>
   )
 }
 
