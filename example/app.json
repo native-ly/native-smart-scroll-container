@@ -1,0 +1,22 @@
+{
+  "name": "native-smart-scroll-container-example",
+  "displayName": "NativeSmartScrollContainer Example",
+  "expo": {
+    "name": "native-smart-scroll-container-example",
+    "slug": "native-smart-scroll-container-example",
+    "description": "Example app for native-smart-scroll-container",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
